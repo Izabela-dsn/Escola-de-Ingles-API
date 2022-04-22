@@ -3,8 +3,10 @@ const PessoaController = require("../controllers/PessoaController")
 
 const router = Router()
 
-//criando uma rota/endpoint para pegar o metodo de getAllpeople
-router.get("/pessoas", PessoaController.pegaTodasAsPessoas)
+// rota/endpoint para pegar todas a pessoas
+router.get("/pessoas/all", PessoaController.pegaTodasAsPessoas)
+// rota/endpoint para pegar todas a pessoas ativas
+router.get("/pessoas", PessoaController.pegaTodasAsPessoasAtivas)
 // endpoint para pegar uma pessoa /pessoas/:id é o parametro passado
 router.get("/pessoas/:id", PessoaController.pegaUmaPessoa)
 // endpoint para criar
