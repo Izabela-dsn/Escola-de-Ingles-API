@@ -13,6 +13,7 @@ router.post("/pessoas", PessoaController.criaPessoa)
 router.put("/pessoas/:id", PessoaController.atualizaPessoa)
 // endpoint para deletar registros
 router.delete("/pessoas/:id", PessoaController.apagaPessoa)
+router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa)
 
 router.get(
   "/pessoas/:estudanteId/matricula/:matriculaId",
@@ -26,6 +27,12 @@ router.put(
 router.delete(
   "/pessoas/:estudanteId/matricula/:matriculaId",
   PessoaController.apagaMatricula
+)
+router.post("/pessoas/:id/restaura", PessoaController.restauraPessoa)
+
+router.post(
+  "/pessoas/:estudanteId/matricula/:matriculaId/restaura",
+  PessoaController.restauraMatricula
 )
 
 module.exports = router
