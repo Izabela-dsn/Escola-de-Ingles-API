@@ -11,6 +11,10 @@ router.get("/pessoas", PessoaController.pegaTodasAsPessoasAtivas)
 router.get("/pessoas/:id", PessoaController.pegaUmaPessoa)
 
 router.get("/pessoas/:estudanteId/matricula", PessoaController.pegaMatriculas)
+router.get(
+  "/pessoas/matricula/:turmaId/confirmadas",
+  PessoaController.pegaMatriculasPorTurma
+)
 
 // endpoint para criar
 router.post("/pessoas", PessoaController.criaPessoa)
