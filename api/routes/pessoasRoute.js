@@ -25,6 +25,7 @@ router.post(
   "/pessoas/:estudanteId/matricula/:matriculaId/restaura",
   PessoaController.restauraMatricula
 )
+router.post("/pessoas/:estudanteId/cancela", PessoaController.cancelaPessoas)
 
 router.put("/pessoas/:id", PessoaController.atualizaPessoa)
 router.put(
